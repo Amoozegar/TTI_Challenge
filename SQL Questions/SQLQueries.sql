@@ -29,7 +29,7 @@ GROUP BY Product
 ORDER BY [total sales] DESC
 
 
-Q6
+/*Q6*/
 SELECT products.TYPE , 
 SUM(sales.Quantity * sales.Unit_Price) AS "total revenue",
 SUM(sales.Quantity * sales.Unit_Cost) AS "total cost"
@@ -39,7 +39,7 @@ GROUP BY products.TYPE
 ORDER BY [total revenue] DESC
 
 
-Q7
+/*Q7*/
 SELECT SUM(Quantity) AS "number of sold products",
 CASE WHEN Date >= '2016-01-01' AND Date <='2016-03-31' THEN 'first Quarter of 2016'
 		WHEN Date >= '2016-04-01' AND Date <= '2016-06-30' THEN 'second Quarter of 2016'
@@ -64,7 +64,7 @@ GROUP BY
 ORDER BY SUM(Quantity) DESC
 
 
-Q8
+/*Q8*/
 SELECT SUM(sales.Quantity * sales.Unit_Price) AS "total sales", 
 CASE WHEN sales.Date >= '2016-01-01' AND sales.Date <='2016-03-31' THEN 'first Quarter of 2016'
 		WHEN sales.Date >= '2016-04-01' AND sales.Date <= '2016-06-30' THEN 'second Quarter of 2016'
@@ -92,7 +92,7 @@ ORDER BY [total sales] DESC
 
 
 
-Q9)
+/*Q9*/
 SELECT products.Product
 	FROM products 
 	LEFT JOIN sales ON products.Product = sales.Product
